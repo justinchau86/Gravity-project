@@ -1,1 +1,37 @@
-placeholder  
+Build & Run Instructions
+
+Requirements:
+Visual Studio Build Tools 2022 (MSVC)
+CMake 3.21+
+vcpkg installed and integrated with Visual Studio
+
+
+# Clone repository
+git clone https://github.com/<your-username>/gravity-sim.git
+cd gravity-sim
+
+# Configure
+cmake -S . -B build -G "Visual Studio 17 2022" -A x64
+
+# Build
+cmake --build build --config Release
+
+# Run
+build\Release\gravity_sim.exe
+
+
+-----------------------------------------------------------------------
+
+Current Progress — Milestone 1
+Set up development environment with:
+
+C++20 (MSVC toolchain)
+CMake build system
+vcpkg package manager
+Dependencies: GLFW (window/input) + GLAD (OpenGL loader)
+Configured working “Hello Window” OpenGL context
+
+Result:
+Successfully opened a resizable OpenGL window with a dark background.
+This confirms graphics pipeline + build system are working.
+Paves the way for physics and rendering code in later milestones.
